@@ -1,0 +1,1116 @@
+/* universal selector */
+* {
+    /* CSS */
+body {
+    
+    /* this is correct gradient background   */
+    /* background: radial-gradient(circle at top center, #1a2a4f, #1f2937); */
+    
+    /* background-color: #1f2937; */
+    /* background: radial-gradient(  #1a2a4f ,#1f2937 ); */
+    
+    /* background-color: linear-gradient(to right, #1a2a4f, #295fac); */
+    
+    /* background-color: #0b1224; little bit better || #080e1d  better */
+    /* background-color: #080e1d; */
+    
+    /* this is also a good gradient background  */
+    /* background: linear-gradient(to  left, #1a2a4f, #111827 10%);  */
+
+    /* this is also a good gradient background  */
+    /* background: linear-gradient(to top, #1a2a4f, #111827 );  */
+
+    /* this is a image for background  */
+    /* this is a image for background  */
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body takes full viewport height */
+   
+    background-image: url('background5.png'); /* Path to your image */
+    background-size: cover; /* Scales image to cover the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents repeating the image */    
+
+    color: white;
+  }
+  
+}
+
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    
+}
+
+/* Navigation styles */
+.nav {
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* background-color: rgba(135, 206, 235, 0.8); Transparency set to 80% */
+    color: white;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: top 0.3s;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2); /* Added box-shadow for a glassy look */
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 2rem;
+    margin-right: 0.5rem;
+}
+
+.nav-links {
+    display: none;
+    margin-right: 10rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    margin-right: 3rem;
+
+} 
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Add padding to body to prevent content from being hidden under fixed navbar */
+body {
+    padding-top: 4rem; /* Adjust this value based on your navbar height */
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f2b3d;
+    padding: 1rem;
+    z-index: 1000;
+    overflow-y: auto;
+    text-align: center; /* Center-align all text content */
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.75rem 0; /* Increase vertical padding for better touch targets */
+    font-size: 1.1rem; /* Slightly larger font size */
+    margin: 0.5rem 0; /* Add some vertical margin between items */
+}
+
+.mobile-menu hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 1rem auto; /* Center the horizontal rule */
+    width: 80%; /* Make the horizontal rule slightly shorter than full width */
+}
+
+.mobile-menu h3 {
+    color: white;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 auto; /* Center the list */
+    max-width: 80%; /* Limit the width of the list for better readability */
+}
+
+.mobile-menu ul li {
+    margin-bottom: 0.75rem;
+}
+
+/* Center-align the images and text in the sidebar menu items */
+.mobile-menu ul li a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mobile-menu ul li a img {
+    margin-bottom: 0.5rem; /* Add some space between the image and text */
+    width: 32px; /* Set a consistent width for all icons */
+    height: 32px; /* Set a consistent height for all icons */
+}
+
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none !important;
+    }
+}
+
+/* Main content styles */
+main.container {
+    flex-grow: 1;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    
+}
+
+h1 {
+    font-size: 3.2rem;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(43deg, #4158D0 29%, #c850C0 46%, #c09442 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: #ada1a1;
+}
+
+/* Search wrapper and container styles */
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 0.75rem 0.75rem 0.75rem 2.5rem;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 1rem;
+    background-color: rgb(235, 228, 228);
+}
+
+/* Not found message styles */
+.not-found-message {
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 4rem;
+    width: 80%; /* Increase width to 80% or your desired value  earlier it was 100%*/
+    margin-left: auto; /* Centering */
+    margin-right: auto; /* Centering */
+}
+
+/* Grid layout for cards */
+.grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    width: 100%;
+}
+
+/* Card styles */
+.card {
+    /* this is border */
+    /* border: 1px solid #ccc; */
+    border: 1px solid hsla(0, 0%, 100%, .12);
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    background-color: #1f2b3d;
+}
+
+/* Card hover effect */
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+   
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+}
+
+.card-image {
+    width: 40px;
+    height: 40px;
+    margin-right: 1rem;
+    border-radius: 4px;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+/* Pricing indicator styles */
+.pricing-indicator {
+    position: absolute;
+    top: 0;
+    right:0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: white;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.free { background-color: #4CAF50; }
+.freemium { background-color:rgb(196, 131, 142); }
+.paid { background-color: #FFC107; }
+.trial { background-color: #9C27B0; }
+
+.card p {
+    color: #ececf1;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+   /* font-weight: 0; */
+    flex-grow: 1;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.hashtags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.001rem;
+}
+
+.hashtag {
+    /* background-color: #f0f0f0; */
+    color: #6b6464;
+    padding: 0.25rem 0.3rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+/* Visit Website button styles */
+.card a {
+    /*display: inline-block;*/
+    /* background-color: #87CEEB; */
+    background-color: #2196F3;
+    
+    color: white;
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.15s ease;
+
+}
+
+.card a:hover {
+    background-color: #1d69bb;
+    /* background-color:  #1976D2; */
+
+}
+
+/* Footer styles */
+footer {
+    /* background-color: #87CEEB; */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+    z-index: 2; 
+}
+
+/* Responsive styles */
+@media (min-width: 768px) {
+    .nav-links {
+        display: flex;
+    }
+    .menu-button {
+        display: none;
+    }
+}
+
+
+/* Vertical Navigation Bar Styles */
+.vertical-nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 180px;
+    height: 70%;
+    /* background-color: #111827; */
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    /* overflow-y: auto; */
+    /* margin-top: 100px; */
+    /* margin-bottom: 100px; */
+    transition: transform 0.3s ease-in-out;
+    scrollbar-width: thin; /* Add this line to make the scrollbar thin */
+
+    
+}
+
+.vertical-nav h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: #333;
+    margin-top: 100px;
+    margin-left: 10px;
+    color: white;
+}
+
+.vertical-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 39px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+}
+
+.vertical-nav ul li {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.vertical-nav ul li a {
+    text-decoration: none;
+   color: rgb(233, 227, 227);
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.vertical-nav ul li a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.vertical-nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.vertical-nav ul li a svg {
+    margin-right: 10px;
+    stroke: #e9e3e3;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.vertical-nav ul li a:hover svg {
+    transform: scale(1.1);
+    stroke: white;
+}
+
+/* Adjust main content to account for vertical nav */
+main.container {
+    margin-left: 300px; /* Adjust this value based on the width of the vertical nav */
+    z-index: 1; /* Ensure main content is above the vertical nav */
+}
+
+/* Responsive styles for vertical nav */
+@media (max-width: 768px) {
+    .vertical-nav {
+        transform: translateX(-100%);
+        z-index: 1001;
+    }
+
+    .vertical-nav.active {
+        transform: translateX(0);
+    }
+
+    main.container {
+        margin-left: 0;
+    }
+
+    /* Add a toggle button for the vertical nav */
+    .vertical-nav-toggle {
+        display: block;
+        position: fixed;
+        left: 10px;
+        top: 60px;
+        z-index: 1002;
+       
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        /* background-color:  #111827; */
+    }
+}
+
+
+
+/* hero section of gradient background it is working and nice   */
+/* body {
+    background: linear-gradient(to right, #aba3b4, #4674c2);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;    
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+} 
+
+.cta-button {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+} */
+
+
+/* style to vertical nav bar of same gradient background of hero section 
+.vertical-nav {
+    background: linear-gradient(to right, #aba3b4, #4674c2);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}    */
+
+
+/* body different gradient background   */
+/* CSS */
+/* body {
+    height: 100vh;
+   
+    background: radial-gradient(circle at top center, #1a2a4f, #111827);
+    color: white;
+  } */
+  
+
+  /* this is anothe gradient background  */
+/* CSS */
+/* body {
+    height: 100vh;
+    background: radial-gradient(circle at top center, #1a2a4f, #111827 70%);
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .container {
+    padding: 20px;
+    text-align: center;
+  } */
+ 
+/* Add styles for the not found message */
+.not-found-message {
+    text-align: center;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 500px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    main.container {
+        margin-left: 0;
+        padding: 1rem;
+        width: 90%; /* Adjust width for mobile */
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vertical-nav {
+        display: none; /* Hide vertical nav on mobile */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .search-wrapper {
+        max-width: 100%;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+        width: 100%; /* Ensure cards take full width on mobile */
+    }
+
+    /* Adjust header for mobile */
+    header {
+        padding: 1rem;
+    }
+
+    /* Adjust navigation for mobile */
+    .nav {
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        height: 1.5rem;
+    }
+
+    /* Adjust search input for mobile */
+    #searchInput {
+        font-size: 0.9rem;
+        padding: 0.5rem 0.5rem 0.5rem 2rem;
+    }
+
+    /* Adjust not found message for mobile */
+    .not-found-message {
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
+
+/* Additional responsive adjustments */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 0.75rem;
+    }
+
+    .card h2 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .card-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .pricing-indicator {
+        font-size: 0.7rem;
+    }
+
+    /* Further adjust main container for smaller devices */
+    main.container {
+        width: 95%;
+    }
+
+    /* Adjust grid gap for smaller devices */
+    .grid {
+        gap: 1rem;
+    }
+}
+
+/* Add styles for mobile menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #1f2b3d;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.mobile-menu.active {
+    display: block;
+}
+
+.mobile-menu a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Add styles for menu button */
+.menu-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: block;
+    }
+}
+
+/* Add or modify these styles in your existing CSS file */
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Adjust this value based on your navbar height */
+    }
+
+    .nav {
+        padding: 0.5rem 1rem;
+    }
+
+    main.container {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 100%;
+        margin: 0 0 1rem 0;
+        box-sizing: border-box;
+    }
+
+    h1 {
+        font-size: 2rem;
+        word-wrap: break-word;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .search-wrapper {
+        width: 100%;
+    }
+
+    #searchInput {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 0.75rem;
+    }
+
+    .card h2 {
+        font-size: 1rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    .card-image {
+        width: 25px;
+        height: 25px;
+    }
+
+    .pricing-indicator {
+        font-size: 0.6rem;
+        padding: 0.15rem 0.3rem;
+    }
+}
+
+/* Ensure all elements use border-box */
+* {
+    box-sizing: border-box;
+}
+
+/* Adjust the container max-width */
+.container {
+    max-width: 100%;
+    padding: 0 1rem;
+}
+
+/* Add these styles to your existing CSS */
+
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    z-index: 1002;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.close-sidebar {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+
+    .vertical-nav {
+        position: fixed;
+        right: -250px;
+        top: 0;
+        bottom: 0;
+        width: 250px;
+        background-color: #1f2b3d;
+        transition: right 0.3s ease-in-out;
+        overflow-y: auto;
+        z-index: 1003;
+    }
+
+    .vertical-nav.active {
+        right: 0;
+    }
+
+    .close-sidebar {
+        display: block;
+    }
+
+    main.container {
+        margin-right: 0;
+    }
+}
+
+
+
+/* THIS IS FOR FILTER CODE  */
+
+/* Add this to your existing CSS */
+.filter-container {
+    position: absolute;
+    right: 0;
+    top: -60px;
+    width: 250px;
+    z-index: 2;
+}
+
+.price-filter {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(31, 43, 61, 0.9);
+    color: white;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.price-filter:hover {
+    background-color: rgba(31, 43, 61, 1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.price-filter:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for dropdown options */
+.price-filter option {
+    background-color: #1f2b3d;
+    color: white;
+    padding: 8px;
+}
+
+/* Responsive styles for the filter */
+@media (max-width: 768px) {
+    .filter-container {
+        position: static;
+        width: 100%;
+        max-width: 280px;
+        margin: 1rem auto;
+        top: 0;
+    }
+}
+
+/* Add styles for the search results container */
+#searchResultsContainer {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Add this to your existing CSS */
+.search-filter-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+}
+
+.filter-container {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200px;
+}
+
+/* Update responsive styles */
+@media (max-width: 768px) {
+    .search-filter-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filter-container {
+        position: static;
+        width: 100%;
+        max-width: 220px;
+        margin-top: 1rem;
+    }
+}
+
+/* Desktop/Laptop Layout Optimizations */
+@media (min-width: 769px) {
+    .nav-links {
+        display: flex;
+        align-items: center;
+        margin-right: 2rem;
+    }
+
+    .menu-button {
+        display: none;
+    }
+
+    /* Fix for the main container layout */
+    main.container {
+        max-width: 100%;
+        width: calc(100% - 180px);
+        margin-left: 180px;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    /* Fix for the grid layout */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        width: 100%;
+    }
+
+    /* Fix for the vertical nav */
+    .vertical-nav {
+        display: block;
+        width: 180px;
+        height: 100%;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        z-index: 900;
+        background-color: rgba(31, 43, 61, 0.95);
+        overflow-y: auto;
+    }
+
+    /* Fix for the search and filter layout */
+    .search-filter-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        margin-bottom: 2rem;
+    }
+
+    .search-wrapper {
+        width: 60%;
+        max-width: 500px;
+        margin-bottom: 0;
+    }
+
+    .filter-container {
+        position: relative;
+        top: 0;
+        right: auto;
+        width: auto;
+        margin-left: 1rem;
+    }
+
+    .price-filter {
+        width: 200px;
+    }
+
+    /* Card sizing fixes */
+    .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title {
+        display: flex;
+        align-items: center;
+    }
+
+    .card-image {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
+}
+
+/* Large Desktop Screens */
+@media (min-width: 1200px) {
+    main.container {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 200px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+
+    .search-wrapper {
+        max-width: 600px;
+    }
+
+    /* Adjust the vertical navigation for large screens */
+    .vertical-nav {
+        position: fixed;
+        width: 180px;
+        left: 0;
+    }
+}
+
+/* Fix for the largest screens */
+@media (min-width: 1800px) {
+    main.container {
+        max-width: 1800px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

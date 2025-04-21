@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Websites Directory</title>
+    <!-- <link rel="stylesheet" href="/Category css/writing.css"> -->
+    <link rel="stylesheet" href="/Category css/writing.css">
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="nav">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="/placeholder.svg?height=32&width=32" alt="Logo">
+                <span>AI Directory</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="active">Home</a>
+               
+                <a href="Recent release.html">Recent Release</a>
+                <a href="Leading Companies.html">Leading Companies</a>
+                <a href="/submit tool.html">Submit your tools</a>
+
+            </div>
+            <!-- <div class="nav-right">
+                <input type="search" placeholder="Quick search..." aria-label="Quick search">
+                <button class="menu-button" aria-label="Toggle menu">☰</button>
+            </div> -->
+        </div>
+    </nav>
+    
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+        <a href="/">Home</a>
+        <a href="/categories.html">Categories</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <div class="mobile-search">
+            <input type="search" placeholder="Search AI websites..." aria-label="Search">
+        </div>
+    </div>
+
+    <main class="container">
+        <!-- Header section -->
+        <header>
+            <h1>AI Video & Content Tools</h1>
+            <p class="subtitle">Discover powerful AI tools for video and content creation</p>
+        </header>
+
+        <!-- Search input -->
+        <div class="search-wrapper">
+            <div class="search-container">
+              <span class="search-icon">🔍</span>
+              <input type="search" id="searchInput" placeholder="Search AI websites...">
+              </div>   
+              <div id="notFoundMessage" class="not-found-message" style="display: none;">
+              The AI tools you are searching for are not found. Try searching for something else.
+                   </div>
+           </div>
+           </div>
+           
+          
+  <!-- Add this after the search input container -->
+  <div id="searchResultsContainer" style="display: none;">
+      <h2>Search Results</h2>
+      <div id="searchResults"></div>
+  </div>    
+
+        <!-- Grid container for AI website cards -->
+        <div class="grid" id="websiteGrid">
+
+            <!-- SuperMeme - Paid Tool -->
+            <div class="card">
+                <div class="pricing-indicator paid">paid</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="supermeme.png" alt="SuperMeme logo" class="card-image">
+                        <h2>SuperMeme</h2>
+                    </div>
+                </div>
+                <p>An AI tool that generates memes automatically by analyzing text input and creating humorous image-based content for enhanced online engagement</p>
+                <!-- <p>An AI tool that generates memes automatically by analyzing text input and creating humorous image-based content.</p> -->
+                <div class="card-footer">
+                    <div class="hashtags"><!-- Add hashtags here if needed --></div>
+                    <a href="https://supermeme.ai" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- Lalai.ai - Freemium Tool -->
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="lalai.png" alt="Lalai.ai logo" class="card-image">
+                        <h2>Lalai.ai</h2>
+                    </div>
+                </div>
+                <p>An AI tool that automatically generates subtitles for video content, helping creators optimize for accessibility and improve their audience's viewing experience</p>
+                <div class="card-footer">
+                    <div class="hashtags"><!-- Add hashtags here if needed --></div>
+                    <a href="https://lalai.ai" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- Soundraw.io - Paid Tool -->
+            <div class="card">
+                <div class="pricing-indicator paid">paid</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="soundraw.png" alt="Soundraw.io logo" class="card-image">
+                        <h2>Soundraw.io</h2>
+                    </div>
+                </div>
+                <p>An AI-powered music composition tool that allows users to create custom music tracks tailored to their projects, saving time and enhancing creativity</p>
+
+                <div class="card-footer">
+                    <div class="hashtags"><!-- Add hashtags here if needed --></div>
+                    <a href="https://soundraw.io" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- Voiceify - Freemium Tool -->
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="voiceify.png" alt="Voiceify logo" class="card-image">
+                        <h2>Voiceify</h2>
+                    </div>
+                </div>
+                <p>An AI tool that converts text into natural-sounding speech, providing multiple voice options for content creators to add more dynamic audio content.</p>
+
+                <div class="card-footer">
+                    <div class="hashtags"><!-- Add hashtags here if needed --></div>
+                    <a href="https://voiceify.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- Framer - Freemium Tool -->
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="framer.png" alt="Framer logo" class="card-image">
+                        <h2>Framer</h2>
+                    </div>
+                </div>
+                <<p>An AI design tool that helps developers and designers build high-quality, responsive websites with minimal coding, allowing for faster project completion.</p>
+
+                <div class="card-footer">
+                    <div class="hashtags"><!-- Add hashtags here if needed --></div>
+                    <a href="https://framer.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+
+            <!-- QRCode Monkey - Free Tool -->
+            <div class="card">
+                <div class="pricing-indicator free">free</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="qrcode.png" alt="QRCode Monkey logo" class="card-image">
+                        <h2>QRCode Monkey</h2>
+                    </div>
+                </div>
+                <p>A free tool that generates QR codes for links, contact details, and other data, customizable with logos, colors, and enhanced design options for better branding.</p>
+
+                <div class="card-footer">
+                    <div class="hashtags"><!-- Add hashtags here if needed --></div>
+                    <a href="https://www.qrcode-monkey.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Vertical Navigation Bar -->
+    <nav class="vertical-nav">
+        <h2>Most Popular AI Tools Category</h2>
+        <ul>
+            <li><a href="education.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Education</a></li>
+            <li><a href="programmers.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Programmers</a></li>
+            <li><a href="writing.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg> Writing</a></li>
+            <li><a href="youtube.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg> YouTube</a></li>
+            <li><a href="video.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg> Video</a></li>
+            <li><a href="photo.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> Photo</a></li>
+            <li><a href="music.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg> Music</a></li>
+            <li><a href="go crazy.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6.5l5-3 5 3V18l-5-3-5 3-5-3-5 3V9l5-3z"></path></svg> Go Crazy</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            © 2023 AI Websites Directory. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>

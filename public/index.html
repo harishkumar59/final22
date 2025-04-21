@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI tools Directory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body class="gradient-background">
+    <!-- Navigation bar -->
+    <nav class="nav">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="logo.png" alt="Logo">
+                <span>AI Directory</span>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="/New folder/Recent release.html">Recent Release</a>
+                <a href="/New folder/Leading Companies.html">Leading Companies</a>
+                <a href="submit tool.html">Submit your tools</a>
+            </div>
+            <button class="menu-button" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+    <!-- Mobile menu (hidden by default) -->
+    <div class="mobile-menu">
+        <a href="/" class="active">Home</a>
+        <a href="/New folder/Recent release.html">Recent Release</a>
+        <a href="/New folder/Leading Companies.html">Leading Companies</a>
+        <a href="submit tool.html">Submit your tools</a>
+        <hr>
+        <h3>Most Popular AI Tools Category</h3>
+        <ul>
+            <li><a href="New folder/education.html">Education</a></li>
+            <li><a href="New folder/programmers.html">Programmers</a></li>
+            <li><a href="New folder/writing.html">Writing</a></li>
+            <li><a href="New folder/youtube.html">YouTube</a></li>
+            <li><a href="New folder/video.html">Video</a></li>
+            <li><a href="New folder/photo.html">Photo</a></li>
+            <!-- <li><a href="New folder/music.html">Music</a></li> -->
+            <!-- <li><a href="New folder/go crazy.html">Go Crazy</a></li> -->
+        </ul>
+    </div>
+
+    <main class="container">
+        <!-- Header section -->
+        <header>
+            <h1>AI tools Directory</h1>
+            <p class="subtitle">Discover the best AI resources and tools</p>
+        </header>
+
+        <!-- Search and Filter wrapper -->
+        <div class="search-filter-wrapper">
+            <!-- Search container -->
+            <div class="search-wrapper">
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="search" id="searchInput" placeholder="Search AI websites...">
+                </div>
+                <div id="notFoundMessage" class="not-found-message" style="display: none;">
+                    The AI tools you are searching for are not found. Try searching for something else.
+                </div>
+            </div>
+
+            <!-- Filter container -->
+            <div class="filter-container">
+                <select id="priceFilter" class="price-filter">
+                    <option value="all">All Pricing Options  </option>
+                    <option value="free">Free</option>
+                    <option value="freemium">Freemium</option>
+                    <option value="paid">Paid</option>
+                    <option value="trail">Trial</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Search Results Container -->
+        <div id="searchResultsContainer" style="display: none;">
+            <h2>Search Results</h2>
+            <div id="searchResults"></div>
+        </div>
+
+        <!-- Grid container for AI website cards -->
+        <div class="grid" id="websiteGrid">
+            <div class="card">
+                <div class="pricing-indicator paid">paid</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="\logos\dall e.png" alt="DALL-E logo" class="card-image">
+                        <h2>DALL-E</h2>
+                    </div>
+                </div>
+                <p>AI system by OpenAI that creates realistic images and art from natural language descriptions, pushing the boundaries of visual creativity.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#ImageGeneration</span> -->
+                    </div>
+                    <a href="https://openai.com/dall-e-2" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator paid">paid</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="logos/githubcopilot.png" alt="GitHub Copilot logo" class="card-image">
+                        <h2>GitHub Copilot</h2>
+                    </div>
+                </div>
+                <p>AI-powered coding assistant that suggests code completions and entire functions in real-time, enhancing developer productivity across various programming languages.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#Coding</span> -->
+                    </div>
+                    <a href="https://github.com/features/copilot" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/copy.ai" alt="Copy.ai logo" class="card-image">
+                        <h2>Copy.ai</h2>
+                    </div>
+                </div>
+                <p>AI-powered copywriting tool that generates high-quality content for marketing, blogs, and social media, helping businesses create engaging copy efficiently.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#Copywriting</span> -->
+                    </div>
+                    <a href="https://www.copy.ai" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/sites gpt.png" alt="SitesGPT logo" class="card-image">
+                        <h2>SitesGPT</h2>
+                    </div>
+                </div>
+                <p>AI-powered website builder that generates custom websites based on user prompts, streamlining the web development process for businesses and individuals.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#WebDevelopment</span> -->
+                    </div>
+                    <a href="https://sitesgpt.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/des.webp" alt="Descript logo" class="card-image">
+                        <h2>Descript</h2>
+                    </div>
+                </div>
+                <p>All-in-one audio and video editing platform powered by AI, offering transcription, overdub, and collaborative editing features for content creators.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#VideoEditing</span> -->
+                    </div>
+                    <a href="https://www.descript.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator paid">paid</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/mj-removebg-preview.png" alt="Midjourney logo" class="card-image">
+                        <h2>Midjourney</h2>
+                    </div>
+                </div>
+                <p>AI-powered image generation tool that creates stunning artworks and illustrations from text descriptions, popular among artists and designers.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#ArtGeneration</span> -->
+                    </div>
+                    <a href="https://www.midjourney.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/genai.png" alt="Generative AI logo" class="card-image">
+                        <h2>Generative AI</h2>
+                    </div>
+                </div>
+                <p>serves as a resource for understanding generative AI, offering insights into its applications, potential impacts on industries, and educational resources</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#ContentCreation</span> -->
+                    </div>
+                    <a href="https://generativeai.net/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/murf-ai3.png" alt="Murf logo" class="card-image">
+                        <h2>Murf</h2>
+                    </div>
+                </div>
+                <p>AI-powered text-to-speech platform offering natural-sounding voices in multiple languages for creating voiceovers, narrations, and audio content.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#TextToSpeech</span> -->
+                    </div>
+                    <a href="https://murf.ai" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/otto.webp" alt="Otter.ai logo" class="card-image">
+                        <h2>Otter.ai</h2>
+                    </div>
+                </div>
+                <p>AI-powered transcription and note-taking app that converts speech to text in real-time, ideal for meetings, interviews, and lectures.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#Transcription</span> -->
+                    </div>
+                    <a href="https://otter.ai" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="pricing-indicator freemium">freemium</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="/logos/quillbot2.png" alt="QuillBot logo" class="card-image">
+                        <h2>QuillBot</h2>
+                    </div>
+                </div>
+                <p>AI-powered writing tool that offers paraphrasing, grammar checking, and summarization features to improve writing quality and productivity.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#Writing</span> -->
+                    </div>
+                    <a href="https://quillbot.com" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="pricing-indicator free">free</div>
+                <div class="card-header">
+                    <div class="card-title">
+                        <img src="\LOOGOS2\extra\pixcel.png" alt="QuillBot logo" class="card-image">
+                        <h2>Pixel-AI</h2>
+                    </div>
+                </div>
+                <p>AI-driven image generation tool that transforms text prompts into beautiful artworks and illustrations, widely used by creatives and marketers alike.</p>
+                <div class="card-footer">
+                    <div class="hashtags">
+                        <!-- <span class="hashtag">#AI</span>
+                        <span class="hashtag">#Writing</span> -->
+                    </div>
+                    <a href="https://pixlai.netlify.app/" target="_blank" rel="noopener noreferrer">Visit Website</a>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+
+    <!-- Vertical Navigation Bar -->
+    <nav class="vertical-nav" id="sidebarMenu">
+        <button class="close-sidebar">&times;</button>
+        <h2>Most Popular AI Tools Category</h2>
+        <ul>
+            <li><a href="New folder/education.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg> Education</a></li>
+            <li><a href="New folder/programmers.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg> Programmers</a></li>
+            <li><a href="New folder/writing.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.66V20a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h5.34"></path><polygon points="18 2 22 6 12 16 8 16 8 12 18 2"></polygon></svg> Writing</a></li>
+            <li><a href="New folder/youtube.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg> YouTube</a></li>
+            <li><a href="New folder/video.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg> Video</a></li>
+            <li><a href="New folder/photo.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><polyline points="21 15 16 10 5 21"></polyline></svg> Photo</a></li>
+            <li><a href="New folder/music.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg> Music</a></li>
+            <li><a href="New folder/go crazy.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6.5l5-3 5 3V18l-5-3-5 3-5-3-5 3V9l5-3z"></path></svg> Go Crazy</a></li>
+            
+            
+            <!-- <li><a href="New folder/music.html">Music</a></li> -->
+            <!-- <li><a href="New folder/go crazy.html">Go Crazy</a></li> -->
+        </ul>
+    </nav>
+
+    <!-- Footer -->
+    <!-- <hr> -->
+    <footer>
+        <div class="container">
+            © 2023 AI Websites Directory. All rights reserved.
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+
+
+    <script>
+        // this is for filter
+        document.addEventListener('DOMContentLoaded', function() {
+           const priceFilter = document.getElementById('priceFilter');
+           const cards = document.querySelectorAll('.card');
+       
+           priceFilter.addEventListener('change', function() {
+               const selectedFilter = this.value;
+               
+               cards.forEach(card => {
+                   const pricingIndicator = card.querySelector('.pricing-indicator');
+                   if (selectedFilter === 'all' || pricingIndicator.classList.contains(selectedFilter)) {
+                       card.style.display = 'block';
+                   } else {
+                       card.style.display = 'none';
+                   }
+               });
+           });
+       
+           // Reset filter when searching
+           const searchInput = document.getElementById('searchInput');
+           if (searchInput) {
+               searchInput.addEventListener('input', () => {
+                   priceFilter.value = 'all';
+               });
+           }
+       }); 
+       </script>
+
+       
+</body>
+</html>
